@@ -12,11 +12,14 @@ namespace HW1c.Backend
         ///  Returns the List of Logs
         /// </summary>
         /// <returns></returns>
-        public List<LogViewModel> Index()
+        public LogViewModel Index()
         {
-            var myData = new List<LogViewModel>();
+            var myData = new LogViewModel();
 
             // TODO:  Populate some Log Data here...
+            myData.LogList.Add(new LogModel { AppVersion = "1" });
+            myData.LogList.Add(new LogModel { AppVersion = "2" });
+            myData.LogList.Add(new LogModel { AppVersion = "3" });
 
             return myData;
         }
