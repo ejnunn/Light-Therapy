@@ -9,11 +9,26 @@
 
 <div>
 
-    @{
-        foreach (var item in Model.LogList)
-        {
-            <span>App Version: @item.AppVersion</span><br />
-        }
-    }
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">App Version</th>
+                <th scope="col">Phone ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model.LogList)
+                {
+                    <tr>
+                        <td>@item.RecordedDateTime</td>
+                        <td>@item.AppVersion</td>
+                        <td>@item.PhoneID</td>
+                    </tr>
+                }
+            }
 
+        </tbody>
+    </table>
 </div>
