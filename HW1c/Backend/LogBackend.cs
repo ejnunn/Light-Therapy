@@ -17,9 +17,9 @@ namespace HW1c.Backend
             var myData = new LogViewModel();
 
             // TODO:  Populate some Log Data here...
-            myData.LogList.Add(new LogModel { AppVersion = "1" });
-            myData.LogList.Add(new LogModel { AppVersion = "2" });
-            myData.LogList.Add(new LogModel { AppVersion = "3" });
+            myData.LogList.Add(new LogModel { AppVersion = "1",PhoneID = "ABC" });
+            myData.LogList.Add(new LogModel { AppVersion = "2", PhoneID = "MNO" });
+            myData.LogList.Add(new LogModel { AppVersion = "3", PhoneID = "ZYX" });
 
             return myData;
         }
