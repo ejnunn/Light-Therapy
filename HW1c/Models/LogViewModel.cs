@@ -10,6 +10,6 @@ namespace HW1c.Models
         /// <summary>
         /// List of Logs
         /// </summary>
-        public List<LogModel> LogList { get; set; }
+        public List<LogModel> LogList { get; set; } = new List<LogModel>();
     }
 }
