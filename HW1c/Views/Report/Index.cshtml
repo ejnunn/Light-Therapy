@@ -22,9 +22,9 @@
                 foreach (var item in Model.LogList)
                 {
                     <tr>
-                        <td>@item.RecordedDateTime</td>
+                        <td>@item.RecordedDateTime.ToShortTimeString()</td>
                         <td>@item.AppVersion</td>
-                        <td>@item.PhoneID</td>
+                        <td>item.PhoneID</td>
                     </tr>
                 }
             }
