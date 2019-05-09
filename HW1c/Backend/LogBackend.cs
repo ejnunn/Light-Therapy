@@ -17,10 +17,10 @@ namespace HW1c.Backend
             var myData = new LogViewModel();
 
             // TODO:  Populate some Log Data here...
-            myData.LogList.Add(new LogModel { AppVersion = "1",PhoneID = "ABC" });
-            myData.LogList.Add(new LogModel { AppVersion = "2", PhoneID = "MNO" });
-            myData.LogList.Add(new LogModel { AppVersion = "3", PhoneID = "ZYX" });
-
+            myData.LogList.Add(new LogModel { AppVersion = "1",PhoneID = "ABC",RecordedDateTime = DateTime.Now });
+            myData.LogList.Add(new LogModel { AppVersion = "2", PhoneID = "MNO", RecordedDateTime = DateTime.Parse("01/23/2019") });
+            myData.LogList.Add(new LogModel { AppVersion = "3", PhoneID = "ZYX", RecordedDateTime = DateTime.Now.AddDays(-2) });
+            myData.LogList.Add(new LogModel { AppVersion = "3.3", PhoneID = "ZYXa", RecordedDateTime = DateTime.Now.AddYears(-1) });
             return myData;
         }
 

@@ -1,5 +1,5 @@
 ﻿@using HW1c.Models;
-@model LogViewModel
+@model ReportViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -7,28 +7,44 @@
 
 <h2>Mike Koenig Report</h2>
 
-<div>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <h2>Number of users</h2>
+            <h2>@Model.NumberOfUsers</h2>
+        </div>
+        <div class="col">
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">App Version</th>
+                            <th scope="col">Phone ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            foreach (var item in Model.LogViewModel.LogList)
+                            {
+                                <tr>
+                                    <td>@item.RecordedDateTime.ToShortDateString()</td>
+                                    <td>@item.AppVersion</td>
+                                    <td>@item.PhoneID</td>
+                                </tr>
+                            }
+                        }
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Date</th>
-                <th scope="col">App Version</th>
-                <th scope="col">Phone ID</th>
-            </tr>
-        </thead>
-        <tbody>
-            @{
-                foreach (var item in Model.LogList)
-                {
-                    <tr>
-                        <td>@item.RecordedDateTime.ToShortTimeString()</td>
-                        <td>@item.AppVersion</td>
-                        <td>item.PhoneID</td>
-                    </tr>
-                }
-            }
+                    </tbody>
+                </table>
+            </div>
 
-        </tbody>
-    </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img src="~/Content/Img/PieChart1.png" />
+        </div>
+    </div>
 </div>
+

@@ -13,8 +13,12 @@ namespace HW1c.Controllers
         // GET: Index
         public ActionResult Index()
         {
-            var myData = new LogBackend().Index();
-            return View(myData);
+            var myViewModel = new ReportViewModel();
+
+            myViewModel.LogViewModel = new LogBackend().Index();
+            myViewModel.NumberOfUsers = 3;
+
+            return View(myViewModel);
         }
     }
 }
