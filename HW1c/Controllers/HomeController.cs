@@ -25,9 +25,9 @@ namespace HW1c.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Team()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your team page.";
 
             return View();
         }
