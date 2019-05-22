@@ -133,6 +133,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Img\Orula Logo.gif" />
+    <Content Include="Content\Img\Photos_Taken_By_Location.png" />
     <Content Include="Content\Img\PieChart1.PNG" />
     <Content Include="Content\Img\Shedding.jpg" />
     <Content Include="Content\Img\Welsh-Springer-Spaniel-3.jpg" />
