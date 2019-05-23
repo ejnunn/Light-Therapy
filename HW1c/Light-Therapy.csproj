@@ -137,7 +137,6 @@
     <Content Include="Content\Img\Doctor.png" />
     <Content Include="Content\Img\Orula_Logo.gif" />
     <Content Include="Content\Img\OSVersionChart.PNG" />
-    <Content Include="Content\Img\Phone_Types.png" />
     <Content Include="Content\Img\PhoneTypeChart.PNG" />
     <Content Include="Content\Img\Photos_Taken_By_Location.png" />
     <Content Include="Content\Img\PhotoTakenRetakenChart.PNG" />
