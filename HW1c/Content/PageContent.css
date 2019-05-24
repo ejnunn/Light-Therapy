@@ -1,2 +1,7 @@
-﻿body {
+﻿.body {
+   background-color:#93C1B4
+}
+
+.text-container {
+   background-color: #E4ECD8
 }
