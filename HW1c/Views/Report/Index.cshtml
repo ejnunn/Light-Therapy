@@ -26,7 +26,6 @@
                     font-family: Arial, Helvetica, sans-serif;
                 }
             </style>
-
             <!-- Modal content-->
             <!-- Trigger the Modal -->
             <img id="myImg" src="~/Content/Img/Photos_Taken_By_Location.png" alt="Photos Taken By Location" style="width:100%;max-width:300px">
@@ -39,34 +38,46 @@
                 <img class="modal-content" id="img01">
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
+
+                <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+
+                    // Get the image and insert it inside the modal - use its "alt" text as a caption
+                    var img = document.getElementById("myImg");
+                    var modalImg = document.getElementById("img01");
+                    var captionText = document.getElementById("caption");
+                    img.onclick = function () {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                        captionText.innerHTML = this.alt;
+                    }
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+                </script>
             </div>
-            <script>
-                // Get the modal
-                var modal = document.getElementById("myModal");
-
-                // Get the image and insert it inside the modal - use its "alt" text as a caption
-                var img = document.getElementById("myImg");
-                var modalImg = document.getElementById("img01");
-                var captionText = document.getElementById("caption");
-                img.onclick = function () {
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                    captionText.innerHTML = this.alt;
-                }
-
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
-
-                // When the user clicks on <span> (x), close the modal
-                span.onclick = function () {
-                    modal.style.display = "none";
-                }
-            </script>
-
             <h5 class="text-center">Photos taken at each location</h5>
         </div>
         <div class="col-4">
-            <img src="~/Content/Img/Daily active users.png" class="img-thumbnail" />
+            <!-- Modal content-->
+            <!-- Trigger the Modal -->
+            <img id="myImg2" src="~/Content/Img/Daily active users.png" alt="Daily Active Users" style="width:100%;max-width:300px">
+
+            <!-- The Modal -->
+            <div id="myModal2" class="modal">
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img02">
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption2"></div>
+            </div>
             <h5 class="text-center">Daily active users</h5>
         </div>
         <div class="col-4">

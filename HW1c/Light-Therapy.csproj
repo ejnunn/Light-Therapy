@@ -143,6 +143,7 @@
     <Content Include="Content\ModalImage.css" />
     <Content Include="Content\PageContent.css" />
     <Content Include="Content\Sidebar1.css" />
+    <Content Include="Content\TeamPageStyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
