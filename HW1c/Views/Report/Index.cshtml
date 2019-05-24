@@ -1,4 +1,4 @@
-﻿@using HW1c.Models;
+﻿@using HW1c.Models
 @model ReportViewModel
 
 @{
@@ -19,6 +19,7 @@
     <div class="row">
         <div class="col-4">
 
+            <link href="~/Content/ModalImage.css" rel="stylesheet" type="text/css" />
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <style>
                 body {
@@ -26,22 +27,19 @@
                 }
             </style>
 
+            <!-- Modal content-->
             <!-- Trigger the Modal -->
-            <img id="myImg" src="~/Content/Img/Photos_Taken_By_Location.png" alt="Snow" style="width:100%; max-width:300px">
+            <img id="myImg" src="~/Content/Img/Photos_Taken_By_Location.png" alt="Photos Taken By Location" style="width:100%;max-width:300px">
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
-
                 <!-- The Close Button -->
                 <span class="close">&times;</span>
-
                 <!-- Modal Content (The Image) -->
                 <img class="modal-content" id="img01">
-
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
             </div>
-            
             <script>
                 // Get the modal
                 var modal = document.getElementById("myModal");
@@ -123,7 +121,6 @@
     </div>
         -->
 </div>
-
 
 
 
