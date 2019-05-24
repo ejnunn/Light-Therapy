@@ -140,6 +140,7 @@
     <Content Include="Content\Img\PhoneTypeChart.PNG" />
     <Content Include="Content\Img\Photos_Taken_By_Location.png" />
     <Content Include="Content\Img\PhotoTakenRetakenChart.PNG" />
+    <Content Include="Content\ModalImage.css" />
     <Content Include="Content\Sidebar1.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
