@@ -1,4 +1,5 @@
 ﻿@using HW1c.Models;
+@Styles.Render("~/Content/css")
 @model ReportViewModel
 
 @{
@@ -11,7 +12,21 @@
     <!-- Top row of Weekly Reports -->
     <div class="row">
         <div class="col-4">
-            <img src="~/Content/Img/Photos_Taken_By_Location.png" class="img-thumbnail" />
+            <!-- Trigger the Modal -->
+            <img id="myImg" src="~/Content/Img/Photos_Taken_By_Location.png" alt="Snow" style="width:100%;max-width:300px">
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+            </div>
             <h5 class="text-center">Photos taken at each location</h5>
         </div>
         <div class="col-4">
@@ -70,4 +85,6 @@
     </div>
         -->
 </div>
+
+
 
