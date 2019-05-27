@@ -7,82 +7,11 @@
 
 <h1 style="margin:10px; padding-top:10px; padding-bottom:20px; text-align:center"> Weekly Reports</h1>
 
-<p align ="right" style="padding-top:8px"><button class="button">Export</button></p>
+<p align="right" style="padding-top:8px"><button class="button">Export</button></p>
 
 
-<div class="container">
-    <!-- Top row of Weekly Reports -->
-    <div class="row">
-        <div class="col-4">
-
-            <link href="~/Content/ModalImage.css" rel="stylesheet" type="text/css" />
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style>
-                body {
-                    font-family: Arial, Helvetica, sans-serif;
-                }
-            </style>
-            <!-- Modal content-->
-            <!-- Trigger the Modal -->
-            <img id="myImg" src="~/Content/Img/Photos_Taken_By_Location.png" alt="Photos Taken By Location" style="width:100%;max-width:300px">
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-
-                <script>
-                    // Get the modal
-                    var modal = document.getElementById("myModal");
-
-                    // Get the image and insert it inside the modal - use its "alt" text as a caption
-                    var img = document.getElementById("myImg");
-                    var modalImg = document.getElementById("img01");
-                    var captionText = document.getElementById("caption");
-                    img.onclick = function () {
-                        modal.style.display = "block";
-                        modalImg.src = this.src;
-                        captionText.innerHTML = this.alt;
-                    }
-
-                    // Get the <span> element that closes the modal
-                    var span = document.getElementsByClassName("close")[0];
-
-                    // When the user clicks on <span> (x), close the modal
-                    span.onclick = function () {
-                        modal.style.display = "none";
-                    }
-                </script>
-            </div>
-            <h5 class="text-center">Photos taken at each location</h5>
-        </div>
-        <div class="col-4">
-            <!-- Modal content-->
-            <!-- Trigger the Modal -->
-            <img id="myImg2" src="~/Content/Img/Daily active users.png" alt="Daily Active Users" style="width:100%;max-width:300px">
-
-            <!-- The Modal -->
-            <div id="myModal2" class="modal">
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img02">
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption2"></div>
-            </div>
-            <h5 class="text-center">Daily active users</h5>
-        </div>
-        <div class="col-4">
-            <img src="~/Content/Img/OSVersionChart.png" class="img-thumbnail" />
-            <h5 class="text-center">OS Versions</h5>
-        </div>
-    </div>
-
-    <!-- 2nd row of Weekly Reports -->
+<div class="container" >
+    <!-- 1nd row of Weekly Reports -->
     <div class="row">
         <div class="col-4">
             <div id="piechart"></div>
@@ -112,51 +41,33 @@
                 }
             </script>
         </div>
+        <div class="col-4">
+            <div id="piechart2"></div>
 
-        <!--
-    <div class="col-4">
-        <img src="~/Content/Img/Photos_Taken_By_Location.png" class="img-thumbnail" />
-    </div>
-    <div class="col-4">
-        <img src="~/Content/Img/Photos_Taken_By_Location.png" class="img-thumbnail" />
-    </div>
-        -->
-    </div>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-    <!-- Report Log Table (from Mike's sample code)
-    <div class="row">
-        <div class="col">
-            <div>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Date</th>
-                            <th scope="col">App Version</th>
-                            <th scope="col">Phone ID</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @{
-                            foreach (var item in Model.LogViewModel.LogList)
-                            {
-                                <tr>
-                                    <td>@item.RecordedDateTime.ToShortDateString()</td>
-                                    <td>@item.AppVersion</td>
-                                    <td>@item.PhoneID</td>
-                                </tr>
-                            }
-                        }
+            <script type="text/javascript">
+                // Load google charts
+                google.charts.load('current', { 'packages': ['corechart'] });
+                google.charts.setOnLoadCallback(drawSecondChart);
 
-                    </tbody>
-                </table>
-            </div>
+                // Draw the chart and set the chart values
+                function drawSecondChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Task', 'Photos Taken'],
+                        ['KitKat 4.4', 135],
+                        ['Jelly Bean 4.3', 15],
+                    ]);
 
+                    // Optional; add a title and set the width and height of the chart
+                    var options = { 'title': 'Photos take by phone type', 'width': 400, 'height': 300 };
+
+                    // Display the chart inside the <div> element with id="piechart"
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+                    chart.draw(data, options);
+                }
+            </script>
         </div>
     </div>
-        -->
 </div>
-
-
-
-
 
