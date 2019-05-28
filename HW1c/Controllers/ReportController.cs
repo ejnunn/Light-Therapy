@@ -20,5 +20,10 @@ namespace HW1c.Controllers
 
             return View(myViewModel);
         }
+
+        public ActionResult CustomReport()
+        {
+            return View();
+        }
     }
 }
