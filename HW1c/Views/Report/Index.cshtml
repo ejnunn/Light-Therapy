@@ -20,17 +20,15 @@
     </div>
 </div>
 
-<div class=" container">
-    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
-</div>
 
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
 
 
 <div class="container">
     <!-- 1st row of Weekly Reports -->
     <div class="row">
         <div class="col">
+            <div id="chartContainer" style="height:400px; width:100%;"></div>
         </div>
     </div>
 
@@ -38,19 +36,27 @@
     <div class="row">
         <!-- Photos taken by Phone Type -->
         <div class="col-6">
-            <div id="piechart"></div>
+            <div id="piechart" style="height:200px; width:100%;"></div>
         </div>
 
         <!-- OS Versions -->
         <div class="col-6">
-            <div id="piechart2"></div>
+            <div id="piechart2" style="height:200px; width:100%;"></div>
         </div>
     </div>
 </div>
 
 
 
-<!-- Import javascript for charts -->
+
+
+
+
+
+<!-- Import javascript for pie charts -->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<!-- Import javascript for dynamic bar charts -->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <!-- Javascript for dynamic bar graph-->
@@ -118,7 +124,7 @@
         ]);
 
         // Optional; add a title and set the width and height of the chart
-        var options = { 'title': 'Photos take by phone type', 'width': 400, 'height': 300 };
+        var options = { 'title': 'Photos take by phone type'};
 
         // Display the chart inside the <div> element with id="piechart"
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -141,7 +147,7 @@
         ]);
 
         // Optional; add a title and set the width and height of the chart
-        var options = { 'title': 'OS Versions', 'width': 400, 'height': 300 };
+        var options = { 'title': 'OS Versions'};
 
         // Display the chart inside the <div> element with id="piechart"
         var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
