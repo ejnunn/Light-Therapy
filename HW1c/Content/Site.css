@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #93C1B4
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -26,4 +27,10 @@ textarea {
 .PieChartBox{
     Height:40%;
     width:auto;
+}
+
+.sidebar {
+    background-color: black;
+    border:solid;
+    border-color:lightpink;
 }
