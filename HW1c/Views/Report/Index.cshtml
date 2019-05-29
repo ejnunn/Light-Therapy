@@ -21,55 +21,7 @@
 </div>
 
 <div class=" container">
-    <div id="chartContainer" style="height: 400px; width: 100%;">
-        <script>
-            window.onload = function () {
-
-                var dps = []; // dataPoints
-                var chart = new CanvasJS.Chart("chartContainer", {
-                    title: {
-                        text: "Total Photos Taken : Past Week"
-                    },
-                    axisY: {
-                        includeZero: false
-                    },
-                    data: [{
-                        type: "line",
-                        dataPoints: dps
-                    }]
-                });
-
-                var xVal = 0;
-                var yVal = 50;
-                var updateInterval = 10000;
-                var dataLength = 7; // number of dataPoints visible at any point
-
-                var updateChart = function (count) {
-
-                    count = count || 1;
-
-                    for (var j = 0; j < count; j++) {
-                        yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
-                        dps.push({
-                            x: xVal,
-                            y: yVal
-                        });
-                        xVal++;
-                    }
-
-                    if (dps.length > dataLength) {
-                        dps.shift();
-                    }
-
-                    chart.render();
-                };
-
-                updateChart(dataLength);
-                setInterval(function () { updateChart() }, updateInterval);
-
-            }
-        </script>
-    </div>
+    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
 </div>
 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
@@ -79,7 +31,6 @@
     <!-- 1st row of Weekly Reports -->
     <div class="row">
         <div class="col">
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         </div>
     </div>
 
@@ -99,6 +50,59 @@
 
 
 
+<!-- Import javascript for charts -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<!-- Javascript for dynamic bar graph-->
+<script>
+    window.onload = function () {
+
+        var dps = []; // dataPoints
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Total Photos Taken : Past Week"
+            },
+            axisY: {
+                includeZero: false
+            },
+            data: [{
+                type: "line",
+                dataPoints: dps
+            }]
+        });
+
+        var xVal = 0;
+        var yVal = 50;
+        var updateInterval = 10000;
+        var dataLength = 7; // number of dataPoints visible at any point
+
+        var updateChart = function (count) {
+
+            count = count || 1;
+
+            for (var j = 0; j < count; j++) {
+                yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
+                dps.push({
+                    x: xVal,
+                    y: yVal
+                });
+                xVal++;
+            }
+
+            if (dps.length > dataLength) {
+                dps.shift();
+            }
+
+            chart.render();
+        };
+
+        updateChart(dataLength);
+        setInterval(function () { updateChart() }, updateInterval);
+
+    }
+</script>
+
+<!-- Javascript for Photos taken by Phone Type pie chart -->
 <script type="text/javascript">
     // Load google charts
     google.charts.load('current', { 'packages': ['corechart'] });
@@ -122,8 +126,7 @@
     }
 </script>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
+<!-- Java script for OS Versions pie chart -->
 <script type="text/javascript">
     // Load google charts
     google.charts.load('current', { 'packages': ['corechart'] });
