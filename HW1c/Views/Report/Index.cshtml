@@ -76,69 +76,73 @@
 
 
 <div class="container">
-    <!-- 1nd row of Weekly Reports -->
+    <!-- 1st row of Weekly Reports -->
     <div class="row">
-        <div class="col-5">
-            <div id="piechart"></div>
-
+        <div class="col">
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-            <script type="text/javascript">
-                // Load google charts
-                google.charts.load('current', { 'packages': ['corechart'] });
-                google.charts.setOnLoadCallback(drawChart);
-
-                // Draw the chart and set the chart values
-                function drawChart() {
-                    var data = google.visualization.arrayToDataTable([
-                        ['Task', 'Photos Taken'],
-                        ['Samsung Galaxy J5 Prime', 85],
-                        ['Nokia 3.1', 15],
-                        ['Samsung Galaxy J7 Prime', 50],
-                    ]);
-
-                    // Optional; add a title and set the width and height of the chart
-                    var options = { 'title': 'Photos take by phone type', 'width': 400, 'height': 300 };
-
-                    // Display the chart inside the <div> element with id="piechart"
-                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-                    chart.draw(data, options);
-                }
-            </script>
         </div>
-        <div class="col-5">
+    </div>
+
+    <!-- 2nd row of Weekly Reports -->
+    <div class="row">
+        <!-- Photos taken by Phone Type -->
+        <div class="col-6">
+            <div id="piechart"></div>
+        </div>
+
+        <!-- OS Versions -->
+        <div class="col-6">
             <div id="piechart2"></div>
-
-            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-            <script type="text/javascript">
-                // Load google charts
-                google.charts.load('current', { 'packages': ['corechart'] });
-                google.charts.setOnLoadCallback(drawSecondChart);
-
-                // Draw the chart and set the chart values
-                function drawSecondChart() {
-                    var data = google.visualization.arrayToDataTable([
-                        ['Task', 'Photos Taken'],
-                        ['KitKat 4.4', 135],
-                        ['Jelly Bean 4.3', 15],
-                    ]);
-
-                    // Optional; add a title and set the width and height of the chart
-                    var options = { 'title': 'Photos take by phone type', 'width': 400, 'height': 300 };
-
-                    // Display the chart inside the <div> element with id="piechart"
-                    var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-                    chart.draw(data, options);
-                }
-            </script>
         </div>
     </div>
 </div>
 
 
-<body>
 
-</body>
+<script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
 
+    // Draw the chart and set the chart values
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Photos Taken'],
+            ['Samsung Galaxy J5 Prime', 85],
+            ['Nokia 3.1', 15],
+            ['Samsung Galaxy J7 Prime', 50],
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = { 'title': 'Photos take by phone type', 'width': 400, 'height': 300 };
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+    }
+</script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawSecondChart);
+
+    // Draw the chart and set the chart values
+    function drawSecondChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Photos Taken'],
+            ['KitKat 4.4', 135],
+            ['Jelly Bean 4.3', 15],
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = { 'title': 'Photos take by phone type', 'width': 400, 'height': 300 };
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+        chart.draw(data, options);
+    }
+</script>
 
