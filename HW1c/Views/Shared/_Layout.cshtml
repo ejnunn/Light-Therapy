@@ -9,20 +9,19 @@
 </head>
 
 
-    <div class="row">
-        <div class="col-sm-1 sidebar shadow">
-            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-link" })<br />
-            @Html.ActionLink("Report", "Index", "Report", null, new { @class = "btn btn-link" })<br />
-            @Html.ActionLink("Team", "Team", "Home", null, new { @class = "btn btn-link" })<br />
-        </div>
-        <div class="col">
-
-            @RenderBody()
-        </div>
+<div class="row">
+    <div class="col-sm-1 sidebar shadow">
+        @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-link" })<br />
+        @Html.ActionLink("Report", "Index", "Report", null, new { @class = "btn btn-link" })<br />
+        @Html.ActionLink("Team", "Team", "Home", null, new { @class = "btn btn-link" })<br />
     </div>
+    <div class="col">
+
+        @RenderBody()
+    </div>
+</div>
 
 
-<hr />
 <footer>
     <p>&copy; 2019 Orúla. All rights reserved.</p>
 </footer>
