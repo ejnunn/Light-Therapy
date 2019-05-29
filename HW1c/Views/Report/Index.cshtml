@@ -2,13 +2,30 @@
 @model ReportViewModel
 
 @{
+    /**/
+
     ViewBag.Title = "Report";
 }
 
 <h1 style="margin:10px; padding-top:10px; padding-bottom:20px; text-align:center"> Weekly Reports</h1>
+<!--<p align="right" style="padding-top:8px"><button class="button">Export</button></p>
+    -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<p align="right" style="padding-top:8px"><button class="button">Export</button></p>
-<a href="~/Report/CustomReport">Custom Report</a>
+<div class="w3-container">
+    <div class="w3-bar w3-black">
+        <a href="~/Report/CustomReport" class="w3-bar-item w3-button">Custom Report</a>
+        <a href="#" class="w3-bar-item w3-button">Share</a>
+        <a href="#" class="w3-bar-item w3-button">Export</a>
+    </div>
+</div>
+<!--
+<div class="button">
+    <a href="~/Report/CustomReport" class="button">Custom Report</a>
+</div>
+    -->
+
 
 
 <div class="container">
