@@ -29,7 +29,7 @@ textarea {
 }
 
 .sidebar {
-    background-color: black;
+    background-color: #4D6A78;
     position: fixed;
     min-height: 100%;
 }
@@ -39,6 +39,7 @@ textarea {
 }
 
 .sidebar-logo {
+    padding-top:10px;
     max-width=100%;
     max-height=100%;
 }
