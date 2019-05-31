@@ -3,16 +3,13 @@
 
 @{
 
-    ViewBag.Title = "Report";
+    ViewBag.Title = "Live Report";
 }
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<!-- Page Title -->
-<h1 style="margin:10px; padding-top:10px; padding-bottom:20px; text-align:center"> Weekly Reports</h1>
-
-
 
 <!-- Reports Section -->
 <div class="container shadow" style="background-color:#FFFFFF">
@@ -84,7 +81,7 @@
                     x: xVal,
                     y: yVal
                 });
-                
+
                 xVal++;
                 xVal = xVal % 30;
             }
@@ -118,7 +115,7 @@
         ]);
 
         // Optional; add a title and set the width and height of the chart
-        var options = { 'title': 'Photos take by phone type'};
+        var options = { 'title': 'Photos take by phone type' };
 
         // Display the chart inside the <div> element with id="piechart"
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -141,7 +138,7 @@
         ]);
 
         // Optional; add a title and set the width and height of the chart
-        var options = { 'title': 'OS Versions'};
+        var options = { 'title': 'OS Versions' };
 
         // Display the chart inside the <div> element with id="piechart"
         var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
