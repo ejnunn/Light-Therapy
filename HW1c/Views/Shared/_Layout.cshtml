@@ -15,10 +15,11 @@
             <div>
                 <img src="~/Content/Img/Orula_Sidebar_Logo.png" class="col sidebar-logo" />
             </div>
-            
-            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-link" })<br />
-            @Html.ActionLink("Report", "Index", "Report", null, new { @class = "btn btn-link" })<br />
-            @Html.ActionLink("Team", "Team", "Home", null, new { @class = "btn btn-link" })<br />
+            <div class="btn-group-vertical">
+                @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-block" })<br />
+                @Html.ActionLink("Report", "Index", "Report", null, new { @class = "btn btn-block" })<br />
+                @Html.ActionLink("Team", "Team", "Home", null, new { @class = "btn btn-block" })<br />
+            </div>
         </div>
         <div class="col offset-2">
             @RenderBody()
