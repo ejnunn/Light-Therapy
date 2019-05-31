@@ -45,12 +45,6 @@
 </div>
 
 
-
-
-
-
-
-
 <!-- Import javascript for pie charts -->
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
@@ -64,21 +58,21 @@
         var dps = []; // dataPoints
         var chart = new CanvasJS.Chart("chartContainer", {
             title: {
-                text: "Total Photos Taken : Past Week"
+                text: "Live Active Users"
             },
             axisY: {
                 includeZero: false
             },
             data: [{
-                type: "line",
+                type: "doughnut",
                 dataPoints: dps
             }]
         });
 
         var xVal = 0;
-        var yVal = 50;
+        var yVal = 25;
         var updateInterval = 10000;
-        var dataLength = 7; // number of dataPoints visible at any point
+        var dataLength = 4; // number of dataPoints visible at any point
 
         var updateChart = function (count) {
 
@@ -90,7 +84,9 @@
                     x: xVal,
                     y: yVal
                 });
+                
                 xVal++;
+                xVal = xVal % 30;
             }
 
             if (dps.length > dataLength) {
