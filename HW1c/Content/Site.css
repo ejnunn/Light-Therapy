@@ -40,6 +40,12 @@ textarea {
 
 .sidebar-logo {
     padding-top:10px;
-    max-width=100%;
-    max-height=100%;
+    max-width:100%;
+    max-height:100%;
+}
+
+.page-title {
+    color: white;
+    background-color:#4D6A78;
+    margin-bottom:10px;
 }
