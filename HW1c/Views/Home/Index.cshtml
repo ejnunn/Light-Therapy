@@ -2,15 +2,40 @@
     ViewBag.Title = "Home Page";
 }
 
+
 <div class="jumbotron shadow logo">
-    <img src="~/Content/Img/Orula_Logo.png" class="col-6 offset-3" />
+    <div class="row">
+        <div class="col-2 offset-10 align-self-right">
+            <div class="wrapper fadeInDown">
+                <div id="formContent">
+                    <!-- Login Form -->
+                    <form>
+                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+                        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                        <input type="submit" class="fadeIn fourth" value="Log In">
+                    </form>
+                    <!-- Remind Passowrd -->
+                    <div id="formFooter">
+                        <a class="underlineHover" href="#">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <img src="~/Content/Img/Orula_Logo.png" class="col-8 offset-2" />
+
+    </div>
 </div>
 
 
-<div class="container shadow" style="background-color:#E4ECD8">
+
+
+<div class="shadow" style="background-color:#E4ECD8; margin-top:2em">
     <h2 style="text-align:center; padding-top:10px"> Vision </h2>
     <div class="row">
-        <div class="col">
+        <div class="col-8 offset-2" style="text-align:center">
             <p>
                 Orúla is designed around a simple phrase: Knowledge is Power.
                 Orúla empowers medical professionals with pertinent weekly reports
@@ -23,10 +48,10 @@
     </div>
 </div>
 
-    <div class="row" style="padding-top:2em">
-        <div class="col">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1xbOzMUJrt8Kzo2rgS5Ep-OdivEaewtHg" width="100%" height="400px" class="shadow"></iframe>
-        </div>
+<div class="row" style="padding-top:2em">
+    <div class="col">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1xbOzMUJrt8Kzo2rgS5Ep-OdivEaewtHg" width="100%" height="400px" class="shadow"></iframe>
     </div>
+</div>
 
 
