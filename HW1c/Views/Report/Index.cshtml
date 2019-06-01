@@ -21,7 +21,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+            <div id="chartContainer" style="height: 650px; width: 100%;"></div>
 
             <script>
                 window.onload = function () {
@@ -45,6 +45,39 @@
                             itemclick: toggleDataSeries
                         },
                         data: [{
+                            type: "spline",
+                            showInLegend: true,
+                            visible: false,
+                            yValueFormatString: "###",
+                            name: "Total",
+                            dataPoints: [
+                                { label: "Monday", y: 97 },
+                                { label: "Tuesday", y: 89 },
+                                { label: "Wednesday", y: 92 },
+                                { label: "Thursday", y: 106 },
+                                { label: "Friday", y: 119 },
+                                { label: "Saturday", y: 94 }
+                            ]
+                        },
+                            {
+                                type: "line",
+                                lineDashType: "dash",
+                                showInLegend: true,
+                                visible: false,
+                                yValueFormatString: "##",
+                                name: "Total Retake",
+                                dataPoints: [
+                                    { label: "Monday", y: 12 },
+                                    { label: "Tuesday", y: 11 },
+                                    { label: "Wednesday", y: 10 },
+                                    { label: "Thursday", y: 12 },
+                                    { label: "Friday", y: 8 },
+                                    { label: "Saturday", y: 6 }
+
+                                ]
+                            },
+
+                            {
                             type: "spline",
                             visible: false,
                             showInLegend: true,
