@@ -19,130 +19,130 @@
         <a href="mailto:administrator@orula.com" target="_blank" class="w3-bar-item w3-button">Share</a>
         <a href="#" class="w3-bar-item w3-button">Export</a>
     </div>
-
-    <!-- 1st row of Weekly Reports -->
     <div class="row">
         <div class="col">
-            <div id="chartContainer" style="height:400px; width:100%;"></div>
+            <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+
+            <script>
+                window.onload = function () {
+
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        theme: "light2",
+                        animationEnabled: true,
+                        title: {
+                            text: "Photos Per Day"
+                        },
+                        axisY: {
+                            includeZero: false,
+                            title: "Number of Photos",
+                            suffix: ""
+                        },
+                        toolTip: {
+                            shared: "true"
+                        },
+                        legend: {
+                            cursor: "pointer",
+                            itemclick: toggleDataSeries
+                        },
+                        data: [{
+                            type: "spline",
+                            visible: false,
+                            showInLegend: true,
+                            yValueFormatString: "##",
+                            name: "Lagos",
+                            dataPoints: [
+                                { label: "Monday", y: 40 },
+                                { label: "Tuesday", y: 24 },
+                                { label: "Wednesday", y: 35 },
+                                { label: "Thursday", y: 29 },
+                                { label: "Friday", y: 53 },
+                                { label: "Saturday", y: 37 },
+                            ]
+                        },
+                            {
+                                type: "line",
+                                lineDashType: "dash",
+                                showInLegend: true,
+                                visible: false,
+                                yValueFormatString: "##",
+                                name: "Lagos Retake",
+                                dataPoints: [
+                                    { label: "Monday", y: 6 },
+                                    { label: "Tuesday", y: 3 },
+                                    { label: "Wednesday", y: 2 },
+                                    { label: "Thursday", y: 1 },
+                                    { label: "Friday", y: 2 },
+                                    { label: "Saturday", y: 1 }
+
+                                ]
+                            },
+                        {
+                            type: "spline",
+                            showInLegend: true,
+                            visible: false,
+                            yValueFormatString: "##",
+                            name: "Abuja",
+                            dataPoints: [
+                                { label: "Monday", y: 16 },
+                                { label: "Tuesday", y: 33 },
+                                { label: "Wednesday", y: 20 },
+                                { label: "Thursday", y: 12 },
+                                { label: "Friday", y: 24 },
+                                { label: "Saturday", y: 17 }
+
+                            ]
+                        },
+                        {
+                            type: "spline",
+                            visible: false,
+                            showInLegend: true,
+                            yValueFormatString: "##",
+                            name: "Calabar",
+                            dataPoints: [
+                                { label: "Monday", y: 27 },
+                                { label: "Tuesday", y: 21 },
+                                { label: "Wednesday", y: 18 },
+                                { label: "Thursday", y: 44 },
+                                { label: "Friday", y: 35 },
+                                { label: "Saturday", y: 20 }
+                            ]
+                        },
+                        {
+                            type: "spline",
+                            showInLegend: true,
+                            yValueFormatString: "##",
+                            name: "Kano",
+                            dataPoints: [
+                                { label: "Monday", y: 14 },
+                                { label: "Tuesday", y: 11 },
+                                { label: "Wednesday", y: 19 },
+                                { label: "Thursday", y: 21 },
+                                { label: "Friday", y: 7 },
+                                { label: "Saturday", y: 20 }
+                            ]
+                        },
+
+
+                        ]
+                    });
+                    chart.render();
+                    
+                    function toggleDataSeries(e) {
+                        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                            e.dataSeries.visible = false;
+                        } else {
+                            e.dataSeries.visible = true;
+                        }
+                        chart.render();
+                    }
+                }
+            </script>
+        
         </div>
     </div>
-
-    <!-- 2nd row of Weekly Reports -->
-    <div class="row">
-        <!-- Photos taken by Phone Type -->
-        <div class="col-6">
-            <div id="piechart" style="height:200px; width:100%;"></div>
-        </div>
-
-        <!-- OS Versions -->
-        <div class="col-6">
-            <div id="piechart2" style="height:200px; width:100%;"></div>
-        </div>
-    </div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </div>
 
 
-<!-- Import javascript for pie charts -->
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
-<!-- Import javascript for dynamic bar charts -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-<!-- Javascript for dynamic bar graph-->
-<script>
-    window.onload = function () {
-
-        var dps = []; // dataPoints
-        var chart = new CanvasJS.Chart("chartContainer", {
-            title: {
-                text: "Live Active Users"
-            },
-            axisY: {
-                includeZero: false
-            },
-            data: [{
-                type: "doughnut",
-                dataPoints: dps
-            }]
-        });
-
-        var xVal = 0;
-        var yVal = 25;
-        var updateInterval = 10000;
-        var dataLength = 4; // number of dataPoints visible at any point
-
-        var updateChart = function (count) {
-
-            count = count || 1;
-
-            for (var j = 0; j < count; j++) {
-                yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
-                dps.push({
-                    x: xVal,
-                    y: yVal
-                });
-
-                xVal++;
-                xVal = xVal % 30;
-            }
-
-            if (dps.length > dataLength) {
-                dps.shift();
-            }
-
-            chart.render();
-        };
-
-        updateChart(dataLength);
-        setInterval(function () { updateChart() }, updateInterval);
-
-    }
-</script>
-
-<!-- Javascript for Photos taken by Phone Type pie chart -->
-<script type="text/javascript">
-    // Load google charts
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
-
-    // Draw the chart and set the chart values
-    function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Task', 'Photos Taken'],
-            ['Samsung Galaxy J5 Prime', 85],
-            ['Nokia 3.1', 15],
-            ['Samsung Galaxy J7 Prime', 50],
-        ]);
-
-        // Optional; add a title and set the width and height of the chart
-        var options = { 'title': 'Photos take by phone type' };
-
-        // Display the chart inside the <div> element with id="piechart"
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-        chart.draw(data, options);
-    }
-</script>
-
-<!-- Java script for OS Versions pie chart -->
-<script type="text/javascript">
-    // Load google charts
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawSecondChart);
-
-    // Draw the chart and set the chart values
-    function drawSecondChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Task', 'Photos Taken'],
-            ['KitKat 4.4', 135],
-            ['Jelly Bean 4.3', 15],
-        ]);
-
-        // Optional; add a title and set the width and height of the chart
-        var options = { 'title': 'OS Versions' };
-
-        // Display the chart inside the <div> element with id="piechart"
-        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-        chart.draw(data, options);
-    }
-</script>
 
