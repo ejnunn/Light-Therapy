@@ -39,6 +39,7 @@ textarea {
     color:white;
     width:inherit;
     text-align:center;
+    text-size-adjust:150%;
 }
 
 .sidebar-button:hover {
