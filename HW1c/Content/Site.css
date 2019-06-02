@@ -38,7 +38,6 @@ textarea {
 .sidebar-button {
     background-color:#4D6A78;
     color:white;
-    width:inherit;
     text-align:center;
     text-size-adjust:150%;
 }
@@ -52,9 +51,10 @@ textarea {
 }
 
 .sidebar-logo {
+    align-content:center;
     padding-top:10px;
-    max-width:100%;
-    max-height:100%;
+    max-width:80%;
+    max-height:80%;
 }
 
 .page-title {
