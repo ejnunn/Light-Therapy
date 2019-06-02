@@ -62,8 +62,14 @@ textarea {
     margin-bottom:10px;
 }
 
-.customReport{
-    margin-top: 4px;
+.customReport {
+    margin-top: 8px;
+}
+
+.customReportButton {
+    background-color: #4D6A78;
+    color:white;
+    
 }
 
 
