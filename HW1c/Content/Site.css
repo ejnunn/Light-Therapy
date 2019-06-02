@@ -32,6 +32,17 @@ textarea {
     background-color: #4D6A78;
     position: fixed;
     min-height: 100%;
+    width:inherit;
+}
+
+.sidebar-button {
+    color:white;
+    width:inherit;
+    text-align:center;
+}
+
+.sidebar-button:hover {
+    background-color: #CCCCCC;
 }
 
 .logo {
