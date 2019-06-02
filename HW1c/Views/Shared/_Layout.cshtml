@@ -17,14 +17,13 @@
             </div>
             <div class="text-center">
 
-                <input type="text" id="login" class="fadeIn second"  name="login" placeholder="Username">
-                <input type="password" value="FakePSW" id="myInput" />
-                @Html.ActionLink("Login", "Index", "Report", null, new { @class = "btn btn-block sidebar-button", style = "font-size:20px" })<br />
-
                 @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-block sidebar-button", style = "font-size:20px" })<br />
                 @Html.ActionLink("Report", "Index", "Report", null, new { @class = "btn btn-block sidebar-button", style = "font-size:20px" })<br />
                 @Html.ActionLink("Team", "Team", "Home", null, new { @class = "btn btn-block sidebar-button", style = "font-size:20px" })<br />
 
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username">
+                <input type="password" value="FakePSW" id="myInput" />
+                @Html.ActionLink("Login", "Index", "Report", null, new { @class = "btn btn-block sidebar-button", style = "font-size:20px" })<br />
 
             </div>
         </div>
