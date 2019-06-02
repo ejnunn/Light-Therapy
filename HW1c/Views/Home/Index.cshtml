@@ -5,18 +5,22 @@
 
 <div class="jumbotron shadow logo">
     <div class="row">
-        <div class="col-2 offset-10 align-self-right">
+        <div class="col-2 offset-10 align-self-right padding-top:25em">
             <div class="wrapper fadeInDown">
                 <div id="formContent">
                     <!-- Login Form -->
                     <form>
                         <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
                         <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-                        <input type="submit" class="fadeIn fourth btn btn-block sidebar-button" value="Log In" >
+                        @Html.ActionLink("Login", "Index", "Report", null, new { @class = "btn btn-block sidebar-button", style = "font-size:20px" })<br />
+
                     </form>
                     <!-- Remind Passowrd 
                     <div id="formFooter">
                         <a class="underlineHover" href="#">Forgot Password?</a>
+
+                      
+
                     </div>
                      -->
                 </div>
