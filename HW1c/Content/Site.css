@@ -76,9 +76,15 @@ textarea {
     margin-bottom: 5px;
 }
 
+.report-button-row {
+    margin-top: -10px;
+    background-color: #4D6A78; /* Blue-Grey */
+    color: white;
+}
+
 .report-button {
     background-color: #4D6A78; /* Blue-Grey */
-    color:white;
+    font-size:larger;
 }
 
 .custom-report-button {
