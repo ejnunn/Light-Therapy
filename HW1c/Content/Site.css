@@ -36,14 +36,14 @@ textarea {
 }
 
 .sidebar-button {
-    background-color:#4D6A78;
+    background-color:#4D6A78; /* Blue-Grey */
     color:white;
     text-align:center;
     text-size-adjust:150%;
 }
 
 .sidebar-button:hover {
-    background-color: #CCCCCC;
+    background-color: #CCCCCC; /* Grey */
 }
 
 .logo {
@@ -57,10 +57,18 @@ textarea {
     max-height:80%;
 }
 
+
 .page-title {
     color: white;
-    background-color:#4D6A78;
-    margin-bottom:10px;
+    background-color: #378C72; /* Dark green */
+    margin-bottom: 10px;
+    max-height:50px;
+}
+
+.page-content {
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color:#E4ECD8; /* */
 }
 
 .customReport {
@@ -68,7 +76,12 @@ textarea {
     margin-bottom: 5px;
 }
 
-.customReportButton {
+.report-button {
+    background-color: #4D6A78; /* Blue-Grey */
+    color:white;
+}
+
+.custom-report-button {
     background-color: #4D6A78;
     color:white;
     
