@@ -11,6 +11,7 @@
 <body>
 <div class="container-fluid">
     <div class="row">
+        <!-- Sidebar Section -->
         <div class="col-sm-2 sidebar">
             <div class="text-center">
                 <img src="~/Content/Img/Orula_Sidebar_Logo.png" class="col sidebar-logo" />
@@ -27,13 +28,10 @@
 
             </div>
         </div>
-        <div class="col offset-2">
-            <!-- Title Section -->
-            <div class="container page-title">
-                <h1>@ViewBag.Title</h1>
-            </div>
 
-            <!-- Page specific content -->
+        <!-- Page Content Section -->
+        <div class="col offset-2">
+            <!-- Webpage specific content -->
             @RenderBody()
             
             <!-- Footer Section -->
