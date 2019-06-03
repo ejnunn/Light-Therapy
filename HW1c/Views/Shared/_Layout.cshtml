@@ -28,7 +28,15 @@
             </div>
         </div>
         <div class="col offset-2">
+            <!-- Title Section -->
+            <div class="container page-title">
+                <h1>@ViewBag.Title</h1>
+            </div>
+
+            <!-- Page specific content -->
             @RenderBody()
+            
+            <!-- Footer Section -->
             <footer style="margin-top:10px">
                 <p>&copy; 2019 Orúla. All rights reserved.</p>
             </footer>
