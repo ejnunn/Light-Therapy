@@ -25,5 +25,10 @@ namespace HW1c.Controllers
         {
             return View();
         }
+
+        public ActionResult WeeklyReport()
+        {
+            return View();
+        }
     }
 }
