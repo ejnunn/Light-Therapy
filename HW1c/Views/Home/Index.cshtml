@@ -7,13 +7,25 @@
     <!-- Logo Image -->
     <div class="row">
         <img src="~/Content/Img/Orula_Logo.png" class="col-4 offset-4 logo-image" />
+    </div>
+</div>
 
+<!-- Weird login feature -->
+<div class="container" style="margin-left:-252px; margin-top:-150px; margin-bottom:200px">
+    <div class="row">
+        <div class="col-sm-2 sidebar">
+            <div class="text-center">
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username">
+                <input type="password" value="FakePSW" id="myInput" />
+                @Html.ActionLink("Login", "Index", "Report", null, new { @class = "btn btn-block sidebar-button" })<br />
+            </div>
+        </div>
     </div>
 </div>
 
 <!-- Vision Section -->
 <div class="container shadow page-content">
-    <h2 style="text-align:center"> Vision </h2>
+    <h2 style="text-align:center">Vision</h2>
     <div class="row">
         <div class="col-8 offset-2" style="text-align:center">
             <p>
