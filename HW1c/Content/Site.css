@@ -44,7 +44,20 @@ textarea {
     text-size-adjust:150%;
 }
 
+.login-button {
+    background-color: #4D6A78; /* Blue-Grey */
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-size-adjust: 150%;
+    max-width:90%;
+}
+
 .sidebar-button:hover {
+    background-color: #CCCCCC; /* Grey */
+}
+
+.login-button:hover {
     background-color: #CCCCCC; /* Grey */
 }
 
