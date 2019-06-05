@@ -183,6 +183,7 @@
     <None Include="Properties\PublishProfiles\Orula - FTP2.pubxml" />
     <None Include="Properties\PublishProfiles\Orula - FTP3.pubxml" />
     <None Include="Properties\PublishProfiles\Orula - FTP4.pubxml" />
+    <None Include="Properties\PublishProfiles\Orula - FTP5.pubxml" />
     <None Include="Properties\PublishProfiles\Orula - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Orula - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\Orula - Web Deploy2.pubxml" />
@@ -190,6 +191,7 @@
     <None Include="Properties\PublishProfiles\Orula - Web Deploy4.pubxml" />
     <None Include="Properties\PublishProfiles\Orula - Web Deploy5.pubxml" />
     <None Include="Properties\PublishProfiles\Orula - Web Deploy6.pubxml" />
+    <None Include="Properties\PublishProfiles\Orula - Web Deploy7.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
