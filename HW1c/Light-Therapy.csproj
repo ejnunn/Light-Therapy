@@ -177,6 +177,7 @@
     <Content Include="Content\Data\Weekly_Report_05-20-2019_05-25-2019.xlsx" />
     <Content Include="Content\Data\Weekly_Report_05-27-2019_06-01-2019.xlsx" />
     <Content Include="Content\Data\Weekly_Report_05-27-2019_06-01-2019.pdf" />
+    <Content Include="Content\Data\Custom_Report_05-20-2019_05-21-2019.xlsx" />
     <None Include="Properties\PublishProfiles\Light-Therapy20190514093209 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Orula - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\Orula - FTP1.pubxml" />
